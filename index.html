@@ -82,6 +82,35 @@
   <script src="script.js"></script>
 
 
+<style>
+/* Descendant combinator */
+.container .nav-bar {
+  background-color: blue;
+  height: 50px;
+}
+
+/* Child combinator */
+.container > .content {
+  background-color: yellow;
+  height: 200px;
+}
+
+/* Adjacent sibling combinator */
+.container + .footer {
+  background-color: green;
+  height: 100px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="nav-bar"></div>
+  <div class="content"></div>
+</div>
+<div class="footer"></div>
+
+
 
 </body>
 </html>
