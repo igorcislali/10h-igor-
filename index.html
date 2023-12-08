@@ -200,7 +200,71 @@
             console.log((index + 1) + ". " + step);
         });
     </script>
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudo-classes and Pseudo-elements Example</title>
+    <style>
+        /* Pseudo-classes */
+        a:hover {
+            color: red;
+            text-decoration: underline;
+        }
 
+        input:focus {
+            background-color: lightblue;
+            outline: none;
+        }
+
+        li:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+
+        input:disabled {
+            opacity: 0.5;
+        }
+
+        /* Pseudo-elements */
+        p::first-line {
+            font-weight: bold;
+        }
+
+        p::first-letter {
+            font-size: 150%;
+            color: blue;
+        }
+
+        li::before {
+            content: '-> ';
+        }
+
+        p::after {
+            content: ' (End of paragraph)';
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pseudo-classes and Pseudo-elements Example</h1>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo vitae enim luctus interdum. 
+    Nam eu nisi a arcu eleifend congue. Vivamus sodales est id commodo pharetra.</p>
+
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+
+    <a href="#">Hover over this link</a><br><br>
+
+    <input type="text" placeholder="Try focusing here"><br><br>
+
+    <input type="text" placeholder="This input is disabled" disabled>
+
+    <script>
+        document.querySelector('p').classList.add('extra-class');
+    </script>
    
 </body>
 </html>
