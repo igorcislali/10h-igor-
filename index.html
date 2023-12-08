@@ -1,50 +1,122 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BTest 1</title>
-
-<!-- CSS style -->
-    <style>
-    ul {
-        list-style-type: disc;
-    }
-
-    ol {
-        list-style-type: decimal;
-    }
-
-    li {
-        color: #FF0000;
-        font-size: 16px;
-        background-color: #FFFF00;
-        text-align: center;
-    }
-
-    table {
-        border-collapse: collapse;
-    }
-
-    th, td {
-        border: 1px solid black;
-        padding: 8px;
-    }
-        .title {
-    font-size: 30px;
-    color: #ff7b25;
-}
-
-.content {
-    font-size: 20px;
-    color: #6b7280;
-}
-</style>
+    <title>Stylish Website</title>
     
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            color: #666;
+            text-align: center;
+        }
+
+        /* Lists and Tables Styling */
+        ul, ol {
+            margin-left: 30px;
+            color: #FF0000;
+            font-size: 16px;
+            background-color: #FFFF00;
+            text-align: center;
+        }
+
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        /* Class-based Styling */
+        .title {
+            font-size: 30px;
+            color: #ff7b25;
+            text-align: center;
+        }
+
+        .content {
+            font-size: 20px;
+            color: #6b7280;
+            text-align: center;
+        }
+
+        /* Elements with Class */
+        .myDiv {
+            padding: 20px;
+            margin: 10px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        .myImage {
+            filter: grayscale(100%);
+            width: 100%;
+            height: auto;
+        }
+
+        /* Container Styling */
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #f0f0f0;
+            border: 2px solid #ccc;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .box img {
+            width: 100%;
+            height: 100%;
+            filter: grayscale(50%) blur(2px);
+        }
+
+        /* Advanced Selectors */
+        .container .nav-bar {
+            background-color: blue;
+            height: 50px;
+        }
+
+        .container > .content {
+            background-color: yellow;
+            height: 200px;
+        }
+
+        .container + .footer {
+            background-color: green;
+            height: 100px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Test 2</h1>
-    <p>Test2</p>
-<!-- List -->
+    <h1>Stylish Website</h1>
+    <p>This is a stylish website created with HTML and CSS.</p>
+
+    <!-- Lists and Tables -->
     <ul>
         <li>List item 1</li>
         <li>List item 2</li>
@@ -68,92 +140,41 @@
         </tr>
     </table>
 
+    <!-- Class-based styling -->
+    <h2 class="title">Hello World</h2>
+    <p class="content">This is a simple HTML document with a title and content.</p>
 
+    <!-- Styling elements with classes -->
+    <div class="myDiv">
+        <img class="myImage" src="example.jpg" alt="Example Image">
+    </div>
 
-<h1 class="title">Hello World</h1>
-<p class="content">This is a simple HTML document with a title and content.</p>
+    <!-- Image Filters in a Container -->
+    <div class="container">
+        <div class="box">
+            <h2>Div 1</h2>
+            <img src="https://via.placeholder.com/200" alt="Placeholder Image 1">
+        </div>
 
+        <div class="box">
+            <h2>Div 2</h2>
+            <img src="https://via.placeholder.com/200" alt="Placeholder Image 2">
+        </div>
 
-  <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-  <h1>Welcome to my multi-file website!</h1>
-  <p id="my-paragraph">This is a paragraph with an ID.</p>
-  <script src="script.js"></script>
+        <div class="box">
+            <h2>Div 3</h2>
+            <img src="https://via.placeholder.com/200" alt="Placeholder Image 3">
+        </div>
+    </div>
 
+    <!-- Advanced Selectors -->
+    <div class="container">
+        <div class="nav-bar"></div>
+        <div class="content"></div>
+    </div>
+    <div class="footer"></div>
 
-<style>
-/* Descendant combinator */
-.container .nav-bar {
-  background-color: blue;
-  height: 50px;
-}
-
-/* Child combinator */
-.container > .content {
-  background-color: yellow;
-  height: 200px;
-}
-
-/* Adjacent sibling combinator */
-.container + .footer {
-  background-color: green;
-  height: 100px;
-}
-</style>
-</head>
-<body>
-
-<div class="container">
-  <div class="nav-bar"></div>
-  <div class="content"></div>
-</div>
-<div class="footer"></div>
-
-
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Pseudo-Classes and Pseudo-Elements</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <h1>Welcome to our Website!</h1>
-    <p>Here's some sample text. We will style this with different pseudo-classes and pseudo-elements.</p>
-
-    <h2>Sample List</h2>
-    <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-    </ul>
-
-    <h2>Sample Table</h2>
-    <table>
-        <tr>
-            <th>Header 1</th>
-            <th>Header 2</th>
-        </tr>
-        <tr>
-            <td>Row 1, Column 1</td>
-            <td>Row 1, Column 2</td>
-        </tr>
-        <tr>
-            <td>Row 2, Column 1</td>
-            <td>Row 2, Column 2</td>
-        </tr>
-    </table>
-<head>
-    <style>
-        .my-element {
-            visibility: hidden;
-            opacity: 0.5;
-            display: none;
-        }
-    </style>
-</head>
-<body>
+    <!-- Hidden Element and JavaScript -->
     <div class="my-element">
         This is a hidden element with reduced opacity.
     </div>
@@ -164,9 +185,7 @@
         link.href = "https://www.example.com";
         link.innerHTML = "Click here to visit the website";
         document.body.appendChild(link);
-    </script>
 
-    <script>
         // Finding solution steps
         var solutionSteps = [
             "Identify the problem",
@@ -182,32 +201,6 @@
         });
     </script>
 
-    <!-- Additional resources -->
-    <ul>
-        <li>Read Lesson materials</li>
-        <li>Refer to Documentation</li>
-        <li>Search on Stackoverflow</li>
-        <li>Watch Youtube tutorials</li>
-        <li>Interact with ChatGPT for assistance</li>
-    </ul>
-<html>
-<head>
-<style>
-    .myDiv {
-        padding: 20px;
-        margin: 10px;
-        border: 1px solid black;
-    }
-
-    .myImage {
-        filter: grayscale(100%);
-    }
-</style>
-</head>
-<body>
-
-<div class="myDiv">
-    <img class="myImage" src="example.jpg" alt="Example Image">
-</div>
-
+   
 </body>
+</html>
